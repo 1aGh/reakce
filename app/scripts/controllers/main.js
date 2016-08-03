@@ -1,4 +1,3 @@
-'use strict';
 
 /**
  * @ngdoc function
@@ -7,11 +6,7 @@
  * # MainCtrl
  * Controller of the reakceApp
  */
-angular.module('reakceApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+angular.module('reakceApp').controller('MainCtrl', function AppCtrl($scope) {
+	'use strict';
+    $scope.currentNavItem = 'page1';
   });

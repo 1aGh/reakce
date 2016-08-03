@@ -34,6 +34,7 @@ module.exports = function(config) {
       'bower_components/angular-mailto/angular-mailto.js',
       'bower_components/less/dist/less.js',
       'bower_components/material/js/material.js',
+      'bower_components/angular-material/angular-material.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',
