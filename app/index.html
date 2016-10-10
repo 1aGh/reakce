@@ -30,7 +30,7 @@
 
 		<!-- Add your site or application content here -->
 		<div class="header">
-			<div layout="row" show-gt-lg layout-align="start center" class="top-header">
+			<div layout="row" hide-xs layout-align="start center" class="top-header">
 				<div flex-offset="5">
 					<span class="material-icons md-16">&#xE0CD;</span><span class="info-text">+420 541 230 732</span>
 				</div>
@@ -45,11 +45,22 @@
 				<div>
 					<img src="img/logo.png" class="header-logo"></img>
 				</div>
+				<div>
+					<md-content class="md-padding nav-bar" >
+    				<md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+      				<md-nav-item md-nav-href="#vizitky" name="page1">Vizitky</md-nav-item>
+      				<md-nav-item md-nav-click="goto('page2')" name="page2">Samolepky</md-nav-item>
+      				<md-nav-item md-nav-click="goto('page3')" name="page3">Bannery</md-nav-item>
+      				<md-nav-item md-nav-click="goto('page4')" name="page4">Reklamní cedule</md-nav-item>
+      				</md-nav-bar>
+				</div>
 			</div>
 		</div>
 
 		<div class="container">
-		<div ng-view=""></div>
+		<ng-view>
+		</ng-view>
+		<span>{{currentNavItem}}</span>
 		</div>
 
 		<div class="footer">
@@ -94,6 +105,7 @@
 				<script src="scripts/app.js"></script>
 				<script src="scripts/controllers/main.js"></script>
 				<script src="scripts/controllers/about.js"></script>
+				<script src="scripts/controllers/vizitkyCtrl.js"></script>
 				<!-- endbuild -->
 </body>
 </html>
